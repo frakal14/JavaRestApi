@@ -1,1 +1,1 @@
-# Java Dla Testera - Rest API
+# Java + Rest API
