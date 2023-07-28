@@ -2,7 +2,7 @@ package dto;
 
 import org.json.JSONObject;
 
-public class Booking {
+public class BookingDto {
 
 
     public static JSONObject getDefaultBookingData() {
