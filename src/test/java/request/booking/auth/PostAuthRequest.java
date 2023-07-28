@@ -2,6 +2,7 @@ package request.booking.auth;
 
 import io.restassured.http.ContentType;
 import org.json.JSONObject;
+import url.BookingUrl;
 
 import static io.restassured.RestAssured.given;
 
@@ -13,7 +14,7 @@ public class PostAuthRequest {
                 .contentType(ContentType.JSON)
                 .body(json.toString())
                 .when()
-                .post("https://restful-booker.herokuapp.com/auth")
+                .post(BookingUrl.BASE_URL + BookingUrl.AUTH)
                 .then()
                 .statusCode(200)
                 .extract()

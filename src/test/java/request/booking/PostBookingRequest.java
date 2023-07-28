@@ -3,6 +3,7 @@ package request.booking;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
+import url.BookingUrl;
 
 import static io.restassured.RestAssured.given;
 
@@ -16,7 +17,7 @@ public class PostBookingRequest {
                 .contentType(ContentType.JSON)
                 .body(booking.toString())
                 .when()
-                .post("https://restful-booker.herokuapp.com/booking")
+                .post(BookingUrl.BASE_URL + BookingUrl.BOOKING)
                 .then()
                 .statusCode(200)
                 .extract()

@@ -1,6 +1,7 @@
 package request.booking;
 
 import io.restassured.response.Response;
+import url.BookingUrl;
 
 import static io.restassured.RestAssured.given;
 
@@ -10,7 +11,7 @@ public class GetBookingIdsRequest {
 
         return given()
                 .when()
-                .get("https://restful-booker.herokuapp.com/booking")
+                .get(BookingUrl.BASE_URL + BookingUrl.BOOKING)
                 .then()
                 .statusCode(200)
                 .extract()
